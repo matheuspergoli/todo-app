@@ -13,6 +13,7 @@
     "rules": {
         "semi": "off",
         "quotes": "off",
+        "no-alert": "off",
         "no-console": "off",
         "comma-dangle": "off",
         "import/extensions": "off"
