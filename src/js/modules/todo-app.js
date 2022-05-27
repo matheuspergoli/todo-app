@@ -49,6 +49,3 @@ export default class TodoApp {
     this.setEvent(document, this.deleteEvent)
   }
 }
-
-const todoApp = new TodoApp()
-todoApp.init()
