@@ -16,6 +16,7 @@
         "no-alert": "off",
         "no-console": "off",
         "comma-dangle": "off",
-        "import/extensions": "off"
+        "import/extensions": "off",
+        "class-methods-use-this": "off"
     }
 }
