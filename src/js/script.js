@@ -7,6 +7,20 @@ class TodoApp {
     this.addEvent = this.addEvent.bind(this)
   }
 
+  deleteEvent(event) {
+    if (event.target.classList.contains('delete')) {
+      event.target.parentElement.parentElement.remove()
+    }
+  }
+
+  editEvent(event) {
+    if (event.target.classList.contains('edit')) {
+      const text = prompt('Digite aqui sua nova tarefa')
+      const element = event.target.parentElement.parentElement.querySelector('p')
+      element.innerText = text
+    }
+  }
+
   addEvent() {
     if (!this.input.value) {
       alert('Campo de tarefas vazio.')
@@ -15,10 +29,10 @@ class TodoApp {
 
     const div = document.createElement('div')
     div.classList.add('todo')
-    div.innerHTML = `${this.input.value}
+    div.innerHTML = `<p>${this.input.value}</p>
                       <div>
-                        <button>Edit</button>
-                        <button>Delete</button>
+                        <button class="edit">Edit</button>
+                        <button class="delete">Delete</button>
                       </div>`
     this.resultado.appendChild(div)
     this.input.value = ''
@@ -31,6 +45,8 @@ class TodoApp {
 
   init() {
     this.setEvent(this.btnAdd, this.addEvent)
+    this.setEvent(document, this.editEvent)
+    this.setEvent(document, this.deleteEvent)
   }
 }
 
