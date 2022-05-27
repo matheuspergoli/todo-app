@@ -15,7 +15,7 @@
   \**************************/
 /***/ (() => {
 
-eval("var btnAdd = document.querySelector('[data-btn=\"add\"]'); // const btnEdit = document.querySelector('[data-btn=\"edit\"]')\n// const btnDelete = document.querySelector('[data-btn=\"delete\"]')\n\nvar input = document.querySelector('[type=\"text\"]');\nvar resultado = document.querySelector('.resultado');\n\nfunction createTodo(text) {\n  var div = document.createElement('div');\n  div.classList.add('todo');\n  var todo = \"\".concat(text, \"\\n                 <div>\\n                  <button type=\\\"button\\\" data-btn=\\\"edit\\\">Edit</button>\\n                  <button type=\\\"button\\\" data-btn=\\\"delete\\\">Delete</button>\\n                 </div>\");\n  div.innerHTML = todo;\n  resultado.appendChild(div);\n}\n\nfunction addTodo() {\n  if (!input.value) {\n    alert('Campo de tarefa vazio.');\n    return;\n  }\n\n  createTodo(input.value);\n  input.value = '';\n}\n\nbtnAdd.addEventListener('click', addTodo);\n\n//# sourceURL=webpack://todo-app/./src/js/script.js?");
+eval("\n\n//# sourceURL=webpack://todo-app/./src/js/script.js?");
 
 /***/ }),
 
