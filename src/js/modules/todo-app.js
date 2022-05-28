@@ -16,6 +16,9 @@ export default class TodoApp {
   editEvent(event) {
     if (event.target.classList.contains('edit')) {
       const text = prompt('Digite aqui sua nova tarefa')
+      if (!text.length) {
+        return
+      }
       const element = event.target.parentElement.parentElement.querySelector('p')
       element.innerText = text
     }
